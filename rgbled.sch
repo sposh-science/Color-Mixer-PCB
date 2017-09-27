@@ -1,0 +1,234 @@
+EESchema Schematic File Version 2
+LIBS:rgbled-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rgbled-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED_RABG-RESCUE-rgbled D1
+U 1 1 59CAFD60
+P 4400 2800
+F 0 "D1" H 4475 3150 50  0000 C CNN
+F 1 "LED_RABG" H 4425 2450 50  0000 C CNN
+F 2 "Headers:Pin_Header_Straight_1x04" H 4350 2750 50  0001 C CNN
+F 3 "" H 4350 2750 50  0000 C CNN
+	1    4400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery-RESCUE-rgbled BT1
+U 1 1 59CAFDF5
+P 3325 3600
+F 0 "BT1" H 3425 3650 50  0000 L CNN
+F 1 "Battery" H 3425 3550 50  0000 L CNN
+F 2 "MyLib:bat-holder" V 3325 3640 60  0001 C CNN
+F 3 "" V 3325 3640 60  0000 C CNN
+	1    3325 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 59CAFE7A
+P 3950 2600
+F 0 "R1" V 4030 2600 50  0000 C CNN
+F 1 "560" V 3950 2600 50  0000 C CNN
+F 2 "MyLib:R4-TH-SMD" V 3880 2600 30  0001 C CNN
+F 3 "" H 3950 2600 30  0000 C CNN
+	1    3950 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L POT-RESCUE-rgbled RV1
+U 1 1 59CAFED1
+P 3425 2450
+F 0 "RV1" H 3425 2350 50  0000 C CNN
+F 1 "10K" H 3425 2450 50  0000 C CNN
+F 2 "MyLib:my-slider-pot" H 3425 2450 60  0001 C CNN
+F 3 "" H 3425 2450 60  0000 C CNN
+	1    3425 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 59CB006D
+P 3950 2800
+F 0 "R2" V 4030 2800 50  0000 C CNN
+F 1 "560" V 3950 2800 50  0000 C CNN
+F 2 "MyLib:R4-TH-SMD" V 3880 2800 30  0001 C CNN
+F 3 "" H 3950 2800 30  0000 C CNN
+	1    3950 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 59CB009A
+P 3950 3000
+F 0 "R3" V 4030 3000 50  0000 C CNN
+F 1 "560" V 3950 3000 50  0000 C CNN
+F 2 "MyLib:R4-TH-SMD" V 3880 3000 30  0001 C CNN
+F 3 "" H 3950 3000 30  0000 C CNN
+	1    3950 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L POT-RESCUE-rgbled RV2
+U 1 1 59CB017D
+P 3425 2800
+F 0 "RV2" H 3425 2700 50  0000 C CNN
+F 1 "10K" H 3425 2800 50  0000 C CNN
+F 2 "MyLib:my-slider-pot" H 3425 2800 60  0001 C CNN
+F 3 "" H 3425 2800 60  0000 C CNN
+	1    3425 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT-RESCUE-rgbled RV3
+U 1 1 59CB01C6
+P 3425 3150
+F 0 "RV3" H 3425 3050 50  0000 C CNN
+F 1 "10K" H 3425 3150 50  0000 C CNN
+F 2 "MyLib:my-slider-pot" H 3425 3150 60  0001 C CNN
+F 3 "" H 3425 3150 60  0000 C CNN
+	1    3425 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3425 2300 3675 2300
+Wire Wire Line
+	3675 2300 3675 2600
+Wire Wire Line
+	3675 2600 3800 2600
+Connection ~ 3675 2450
+Wire Wire Line
+	3675 2800 3800 2800
+Wire Wire Line
+	3675 2800 3675 2650
+Wire Wire Line
+	3675 2650 3425 2650
+Wire Wire Line
+	3425 3000 3800 3000
+Wire Wire Line
+	3675 3000 3675 3150
+Connection ~ 3675 3000
+Wire Wire Line
+	3175 2450 3175 3600
+Connection ~ 3175 2800
+Wire Wire Line
+	4700 2800 4700 3400
+Connection ~ 3175 3150
+$Comp
+L Switch_SPDT_x2 SW1
+U 1 1 59CB0509
+P 4400 3500
+F 0 "SW1" H 4200 3650 50  0000 C CNN
+F 1 "Switch_SPDT_x2" H 4150 3350 50  0000 C CNN
+F 2 "MyLib:mySwitch-3way" H 4400 3500 60  0001 C CNN
+F 3 "" H 4400 3500 60  0000 C CNN
+	1    4400 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4700 3600
+Wire Wire Line
+	4100 3500 3475 3500
+Wire Wire Line
+	3475 3500 3475 3600
+$Comp
+L TEST_1P mh1
+U 1 1 59CB0E33
+P 2475 2675
+F 0 "mh1" H 2475 2945 50  0000 C CNN
+F 1 "MH" H 2475 2875 50  0000 C CNN
+F 2 "MyLib:MountingHole-3mm" H 2675 2675 50  0001 C CNN
+F 3 "" H 2675 2675 50  0001 C CNN
+	1    2475 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 59CB1685
+P 3000 3650
+F 0 "#PWR01" H 3000 3400 50  0001 C CNN
+F 1 "GND" H 3000 3500 50  0000 C CNN
+F 2 "" H 3000 3650 50  0001 C CNN
+F 3 "" H 3000 3650 50  0001 C CNN
+	1    3000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 3600 3000 3600
+Wire Wire Line
+	3000 3600 3000 3650
+$Comp
+L TEST_1P mh2
+U 1 1 59CB212D
+P 2725 2675
+F 0 "mh2" H 2725 2945 50  0000 C CNN
+F 1 "MH" H 2725 2875 50  0000 C CNN
+F 2 "MyLib:MountingHole-3mm" H 2925 2675 50  0001 C CNN
+F 3 "" H 2925 2675 50  0001 C CNN
+	1    2725 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 59CB216C
+P 2475 2675
+F 0 "#PWR02" H 2475 2425 50  0001 C CNN
+F 1 "GND" H 2475 2525 50  0000 C CNN
+F 2 "" H 2475 2675 50  0001 C CNN
+F 3 "" H 2475 2675 50  0001 C CNN
+	1    2475 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 59CB2198
+P 2725 2675
+F 0 "#PWR03" H 2725 2425 50  0001 C CNN
+F 1 "GND" H 2725 2525 50  0000 C CNN
+F 2 "" H 2725 2675 50  0001 C CNN
+F 3 "" H 2725 2675 50  0001 C CNN
+	1    2725 2675
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
